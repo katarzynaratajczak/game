@@ -1,0 +1,50 @@
+<div class="text">
+  <h6>Twoim zadaniem jest wpisać w pole nazwy zwierząt. Możesz skorzystać z podpowiedzi.
+  </h6>
+</div>
+<div class="hint">
+  <button (click)="chang()">{{hint}}</button>
+ </div>
+<div class="wrapper">
+  <div class="container">
+    <div id="zagadka">
+      <button class="won"><img [src]="img1"></button>
+    </div>
+    <div id="zagadka">
+      <button class="won"><img [src]="img2"></button>
+    </div>
+    <div id="zagadka">
+      <button class="won"><img [src]="img3"></button>
+    </div>
+    <div id="zagadka">
+      <button class="won"><img [src]="img4"></button>
+    </div>
+  </div>
+
+  <div class="answer">
+    <div class="pies">
+      <input class="pies" [(ngModel)]="zwierze">
+      <div class="nazwa">
+        <p>Zwierze na obrazku to: {{zwierze}} </p>
+      </div>
+    </div>
+    <div class="sowa">
+      <input class="sowa" [(ngModel)]="sowa">
+      <div class="nazwa">
+        <p>Zwierze na obrazku to: {{sowa}} </p>
+      </div>
+    </div>
+    <div class="kot">
+      <input class="kot" [(ngModel)]="kot">
+      <div class="nazwa">
+        <p>Zwierze na obrazku to: {{kot}} </p>
+      </div>
+    </div>
+    <div class="sarna">
+      <input class="sarna" [(ngModel)]="sarna">
+      <div class="nazwa">
+        <p>Zwierze na obrazku to: {{sarna}} </p>
+      </div>
+    </div>
+  </div>
+</div>

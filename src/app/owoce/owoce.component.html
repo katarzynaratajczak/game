@@ -1,0 +1,16 @@
+<div class="text">
+  <h6>Tym razem zadanie polega na znalezieniu wszystkich warzyw i owoców. Możesz wybrać tylko 9 obrazków.
+    <br> Zostało Ci {{count}} ruchów!
+    <br> Znalazłeś/aś {{sum}} warzyw/a i owoce/ów. (Max 9 warzyw i owoców!)
+  </h6>
+</div>
+
+<div class="container">
+  <div *ngFor="let image of imageList">
+    <button [id]=image.classForStyle (click)=clickOnImage(image) [disabled]=image.isActive>
+      <img [src]=image.imagePath *ngIf='!image.isActive'>
+      <img src='/assets/images/gameFruits/check.png' *ngIf='image.isActive && image.isGood'>
+      <img src='/assets/images/gameFruits/bad.png' *ngIf='image.isActive && !image.isGood'>
+    </button>
+  </div>
+</div>

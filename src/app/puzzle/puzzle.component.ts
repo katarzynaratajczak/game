@@ -16,14 +16,13 @@ export class PuzzleComponent implements OnInit {
   title = '';
 
   listGame = new Array<SingleGame>();
+  imageList = new Array<ImageForPuzzle>();
 
   constructor() { }
 
   ngOnInit() {
-    this.imageValue1.imagePath = '/assets/images/gamePuzzle/2/0.png';
-    this.imageValue1.value = 2;
-    this.imageValue2.imagePath = '/assets/images/gamePuzzle/1/0.png';
-    this.imageValue2.value = 1;
+    this.fillImageList();
+    this.fillGameList();
   }
 
   click(click: boolean) {
@@ -35,7 +34,22 @@ export class PuzzleComponent implements OnInit {
     }
   }
 
-  createGame() {
+  fillImageList() {
+    for (let i = 0; i < 6; i++) {
+      const image: ImageForPuzzle = new ImageForPuzzle();
+      image.imagePath = '/assets/images/gamePuzzle/' + (i + 1) + '/0.png';
+      image.value = i + 1;
+      this.imageList.push(image);
+    }
+  }
+
+  fillGameList() {
+    for (let i = 0; i < 3; i++) {
+    const singleGame = new SingleGame();
+    singleGame.image1 = this.imageList.shift();
+    singleGame.image2 = this.imageList.shift();
+
+    this.listGame.push(singleGame);}
   }
 }
 

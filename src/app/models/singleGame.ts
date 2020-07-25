@@ -1,6 +1,8 @@
-export interface SingleGame {
-  imagePath1: string;
-  imagePath2: string;
+import { ImageForPuzzle } from './imageForPuzzle';
+
+export class SingleGame {
+  image1: ImageForPuzzle;
+  image2: ImageForPuzzle;
   isWin: boolean;
 
 }

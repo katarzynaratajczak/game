@@ -6,9 +6,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  friuts = '/assets/images/nav/friuts.png';
-  liczby = '/assets/images/nav/liczby.jpg';
-  literki = '/assets/images/nav/literki.png';
-  zwierzeta = '/assets/images/nav/owce.jpg';
+  friuts = '/assets/images/nav/0.png';
+  liczby = '/assets/images/nav/1.png';
+  literki = '/assets/images/nav/2.png';
+  zwierzeta = '/assets/images/nav/3.png';
   constructor() { }
 }

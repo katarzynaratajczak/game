@@ -11,8 +11,7 @@ export class PuzzleLogikaComponent implements OnInit {
   isWin: boolean;
   isGameActive: boolean;
 
-  @Input() image1;
-  @Input() image2;
+  @Input() game;
   // tslint:disable-next-line: no-output-native
   @Output() clickEvent = new EventEmitter<boolean>();
 

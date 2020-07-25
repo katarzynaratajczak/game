@@ -12,4 +12,6 @@
     <button class="noWon" (click)="changBad()"><img [src]="img2"></button>
   </div>
 </div> -->
-<app-puzzle-logika [image1]="imageValue1" [image2]="imageValue2" (clickEvent)="click($event)"></app-puzzle-logika>
+<div *ngFor='let game of listGame'>
+<app-puzzle-logika [game]="game" (clickEvent)="click($event)"></app-puzzle-logika>
+</div>

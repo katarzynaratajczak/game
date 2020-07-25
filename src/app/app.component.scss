@@ -1,9 +1,55 @@
+@keyframes anim {
+  0% {
+    background-color: lightblue;
+  }
+  20% {
+    background-color: lightcoral;
+  }
+  40% {
+    background-color: lightgreen;
+  }
+  60% {
+    background-color: blueviolet;
+  }
+  80% {
+    background-color: lightsalmon;
+  }
+  100% {
+    background-color: lightblue;
+  }
+
+}
+
+  @-webkit-keyframes anim {
+    0% {
+      background-color: lightblue;
+    }
+    20% {
+      background-color: lightcoral;
+    }
+    40% {
+      background-color: lightgreen;
+    }
+    60% {
+      background-color: blueviolet;
+    }
+    80% {
+      background-color: lightsalmon;
+    }
+    100% {
+      background-color: lightblue;
+    }
+}
+
+
 div {
   height: 40px;
-  background-color: lightblue;
-  margin-bottom: 5px;
+  margin: 10px 0;
   size: 20px;
   text-align: center;
+  animation: anim 20s infinite;
+  -webkit-animation: anim 20s infinite;
+
 }
 nav {
   width: 650px;

@@ -12,10 +12,10 @@ export class OwoceComponent implements OnInit {
   imageList: ImageForGame[] = [];
 
   constructor() {
-    this.setGame();
   }
 
   ngOnInit() {
+    this.setGame();
   }
 
   fillImageList(godImageNumber: number, badImageNumber: number) {

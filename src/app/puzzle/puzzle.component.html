@@ -1,71 +1,15 @@
 <div>
   <p>Masz przed sobą 12 zagadek dotyczących liczb. Spróbuj je rozwiązać. Do dzieła.</p>
+  <h4>Pozostało Ci: {{clickClic}} ruchów</h4>
   <h4>Twoje punkty(max.12 pkt): {{count}} {{title}}</h4>
 </div>
 
 
-<div class="container">
+<!-- <div class="container">
   <div class="zagadka">
     <h6>Który kwiat ma więcej płatów?</h6>
     <button class="won" (click)="changGood()" (click)="sum()" [disabled]="isActive"><img [src]="img1"></button>
     <button class="noWon" (click)="changBad()"><img [src]="img2"></button>
   </div>
-  <div class="zagadka">
-    <h6>Więcej palców jest?</h6>
-    <button class="noWon" (click)="changBad2()" ><img [src]="img3"></button>
-    <button class="won" (click)="changGood2()" (click)="sum2()" [disabled]="isActive2"><img [src]="img4"></button>
-  </div>
-  <div class="zagadka">
-    <h6>Która liczba jest większa?</h6>
-    <button class="noWon" (click)="changBad3()"><img [src]="img5"></button>
-    <button class="won" (click)="changGood3()" (click)="sum3()" [disabled]="isActive3"><img [src]="img6"></button>
-  </div>
-  <div class="zagadka">
-    <h6>Dwoje dzieci jest?</h6>
-    <button class="won" (click)="changGood4()" (click)="sum4()" [disabled]="isActive4"><img [src]="img7"></button>
-    <button class="noWon" (click)="changBad4()"><img [src]="img8"></button>
-  </div>
-  <div class="zagadka">
-    <h6>Gdzie jest wiecej zegarów?</h6>
-    <button class="noWon" (click)="changBad5()"><img [src]="img10"></button>
-    <button class="won" (click)="changGood5()" (click)="sum5()" [disabled]="isActive5"><img [src]="img9"></button>
-     </div>
-  <div class="zagadka">
-    <h6>Więcej dzieci jest na?</h6>
-    <button class="won" (click)="changGood6()" (click)="sum6()" [disabled]="isActive6"><img [src]="img12"></button>
-    <button class="noWon" (click)="changBad6()"><img [src]="img11"></button>
-  </div>
-  <div class="zagadka">
-    <h6>Który obrazek ma więcej ptaszków?</h6>
-    <button class="won" (click)="changGood7()" (click)="sum7()" [disabled]="isActive7"><img [src]="img14"></button>
-    <button class="noWon" (click)="changBad7()"><img [src]="img13"></button>
-  </div>
-  <div class="zagadka">
-    <h6>Jedna kredka jest na obrazku?</h6>
-    <button class="noWon" (click)="changBad8()"><img [src]="img15"></button>
-    <button class="won" (click)="changGood8()" (click)="sum8()" [disabled]="isActive8"><img [src]="img16"></button>
-  </div>
-  <div class="zagadka">
-    <h6>Więcej książek jest?</h6>
-    <button class="won" (click)="changGood9()" (click)="sum9()" [disabled]="isActive9"><img [src]="img17"></button>
-    <button class="noWon" (click)="changBad9()"><img [src]="img18"></button>
-  </div>
-  <div class="zagadka">
-    <h6>3 przyrządy matemetyczne są?</h6>
-    <button class="won" (click)="changGood10()" (click)="sum10()" [disabled]="isActive10"><img [src]="img20"></button>
-    <button class="noWon" (click)="changBad10()" ><img [src]="img19"></button>
-  </div>
-  <div class="zagadka">
-    <h6>5 próbek znajduje się na?</h6>
-    <button class="won" (click)="changGood11()" (click)="sum11()" [disabled]="isActive11"><img [src]="img22"></button>
-    <button class="noWon" (click)="changBad11()" ><img [src]="img21"></button>
-  </div>
-  <div class="zagadka">
-    <h6>Gdzie jest więcej chmurek?</h6>
-    <button class="won" (click)="changGood12()" (click)="sum12()" [disabled]="isActive12"><img [src]="img23"></button>
-    <button class="noWon" (click)="changBad12()"><img [src]="img24"></button>
-  </div>
-
-
-
-</div>
+</div> -->
+<app-puzzle-logika [image1]="imageValue1" [image2]="imageValue2" (clickEvent)="click($event)"></app-puzzle-logika>

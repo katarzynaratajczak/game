@@ -1,0 +1,14 @@
+<div *ngIf="!isGameActive">
+  <img src='/assets/images/gamePuzzle/good.jpg' *ngIf="isWin">
+  <img src='/assets/images/gamePuzzle/bad.jpg' *ngIf="!isWin">
+</div>
+<div *ngIf="isGameActive">
+  <div class="puzzle">
+    <button (click)="saveClick(image1.value, image2.value)">
+      <img [src]='image1.imagePath'>
+    </button>
+    <button (click)="saveClick(image2.value, image1.value)">
+      <img [src]='image2.imagePath'>
+    </button>
+  </div>
+</div>

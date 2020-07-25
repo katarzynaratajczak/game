@@ -10,6 +10,7 @@ import { OwoceComponent } from './owoce/owoce.component';
 import { LiteryComponent } from './litery/litery.component';
 import { FormsModule } from '@angular/forms';
 import { DialogComponent } from './dialog/dialog.component';
+import { PuzzleLogikaComponent } from './puzzle-logika/puzzle-logika.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { DialogComponent } from './dialog/dialog.component';
     ZwierzetaComponent,
     OwoceComponent,
     LiteryComponent,
-    DialogComponent
+    DialogComponent,
+    PuzzleLogikaComponent
   ],
   imports: [
     BrowserModule,

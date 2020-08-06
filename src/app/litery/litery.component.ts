@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { ImageForLitery } from './../models/imageForLitery';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-litery',
@@ -6,11 +7,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./litery.component.scss']
 })
 export class LiteryComponent implements OnInit {
+
+  @Input() list;
+  @Input() answearList;
+
   data: any;
-  title = 'K';
-  title2 = 'G';
-  title3 = 'M';
-  title4 = 'A';
+
   drop(ev) {
     ev.preventDefault();
     this.data = ev.dataTransfer.getData('drag1');
@@ -22,7 +24,7 @@ export class LiteryComponent implements OnInit {
   }
 
   drag(ev) {
-    ev.dataTransfer.setData('drag4', ev.target.id);
+    ev.dataTransfer.setData('drag1', ev.target.id);
   }
 
 
@@ -70,6 +72,7 @@ export class LiteryComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+    console.log(this.list);
   }
 
 }

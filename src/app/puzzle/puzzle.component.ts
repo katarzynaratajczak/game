@@ -17,12 +17,14 @@ export class PuzzleComponent implements OnInit {
 
   listGame = new Array<SingleGame>();
   imageList = new Array<ImageForPuzzle>();
+  listLength: number;
 
   constructor() { }
 
   ngOnInit() {
     this.fillImageList();
     this.fillGameList();
+    this.listLength = this.listGame.length;
   }
 
   click(click: boolean) {

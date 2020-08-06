@@ -3,15 +3,4 @@
   <h4>Pozostało Ci: {{clickClic}} ruchów</h4>
   <h4>Twoje punkty(max.12 pkt): {{count}} {{title}}</h4>
 </div>
-
-
-<!-- <div class="container">
-  <div class="zagadka">
-    <h6>Który kwiat ma więcej płatów?</h6>
-    <button class="won" (click)="changGood()" (click)="sum()" [disabled]="isActive"><img [src]="img1"></button>
-    <button class="noWon" (click)="changBad()"><img [src]="img2"></button>
-  </div>
-</div> -->
-<div *ngFor='let game of listGame'>
-<app-puzzle-logika [game]="game" (clickEvent)="click($event)"></app-puzzle-logika>
-</div>
+<app-puzzle-logika (clickEvent)="click($event)" (games)="listGame" (listLenght)="listLength"></app-puzzle-logika>

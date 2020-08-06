@@ -1,3 +1,4 @@
+<section *ngIf="game">
 <div *ngIf="!isGameActive">
   <img src='/assets/images/gamePuzzle/good.jpg' *ngIf="isWin">
   <img src='/assets/images/gamePuzzle/bad.jpg' *ngIf="!isWin">
@@ -12,3 +13,5 @@
     </button>
   </div>
 </div>
+</section>
+{{games | json}}

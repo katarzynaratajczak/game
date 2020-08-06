@@ -1,5 +1,6 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { ImageForPuzzle } from '../models/imageForPuzzle';
+import { SingleGame } from '../models/singleGame';
 
 
 @Component({
@@ -10,15 +11,19 @@ import { ImageForPuzzle } from '../models/imageForPuzzle';
 export class PuzzleLogikaComponent implements OnInit {
   isWin: boolean;
   isGameActive: boolean;
+  game: SingleGame;
 
-  @Input() game;
+  @Input() games;
+  @Input() listLenght;
   // tslint:disable-next-line: no-output-native
   @Output() clickEvent = new EventEmitter<boolean>();
+
 
   constructor() { }
 
   ngOnInit() {
     this.isGameActive = true;
+    this.startGame();
   }
 
   saveClick(clickedImage: number, secondImage: number) {
@@ -31,14 +36,9 @@ export class PuzzleLogikaComponent implements OnInit {
     this.clickEvent.emit(this.isWin);
 
   }
+
+  startGame() {
+      this.game = this.games.shift();
+  }
 }
-  //   fillList(imageNumber: number) {
-  //     for (let i = imageNumber - 1; i >= 0; i--) {
-  //       const imagesToList: ImageForPuzzle = new ImageForPuzzle();
-  //       imagesToList.imagePath = '/assets/images/gamePuzzle/' + i + '.png';
-  //       this.imageList.push(imagesToList);
-  //     }
-  //   }
-  // setGame() {
-  //   this.fillList(24);
-  // }
+

@@ -15,7 +15,7 @@ export class LiteryComponent implements OnInit {
 
   drop(ev) {
     ev.preventDefault();
-    this.data = ev.dataTransfer.getData('drag1');
+    this.data = ev.dataTransfer.getData(this.list.id);
     ev.target.appendChild(document.getElementById(this.data));
   }
 
@@ -24,55 +24,56 @@ export class LiteryComponent implements OnInit {
   }
 
   drag(ev) {
-    ev.dataTransfer.setData('drag1', ev.target.id);
+    ev.dataTransfer.setData(this.list.id, ev.target.id);
+    console.log('Udało Ci się');
   }
 
 
-  drop2(ev) {
-    ev.preventDefault();
-    this.data = ev.dataTransfer.getData('drag2');
-    ev.target.appendChild(document.getElementById(this.data));
-  }
 
-  allowDrop2(ev) {
-    ev.preventDefault();
-  }
+  // drop2(ev) {
+  //   ev.preventDefault();
+  //   this.data = ev.dataTransfer.getData('drag2');
+  //   ev.target.appendChild(document.getElementById(this.data));
+  // }
 
-  drag2(ev) {
-    ev.dataTransfer.setData('drag3', ev.target.id);
-  }
+  // allowDrop2(ev) {
+  //   ev.preventDefault();
+  // }
 
-  drop3(ev) {
-    ev.preventDefault();
-    this.data = ev.dataTransfer.getData('drag3');
-    ev.target.appendChild(document.getElementById(this.data));
-  }
+  // drag2(ev) {
+  //   ev.dataTransfer.setData('drag3', ev.target.id);
+  // }
 
-  allowDrop3(ev) {
-    ev.preventDefault();
-  }
+  // drop3(ev) {
+  //   ev.preventDefault();
+  //   this.data = ev.dataTransfer.getData('drag3');
+  //   ev.target.appendChild(document.getElementById(this.data));
+  // }
 
-  drag3(ev) {
-    ev.dataTransfer.setData('drag2', ev.target.id);
-  }
+  // allowDrop3(ev) {
+  //   ev.preventDefault();
+  // }
 
-  drop4(ev) {
-    ev.preventDefault();
-    this.data = ev.dataTransfer.getData('drag4');
-    ev.target.appendChild(document.getElementById(this.data));
-  }
+  // drag3(ev) {
+  //   ev.dataTransfer.setData('drag2', ev.target.id);
+  // }
 
-  allowDrop4(ev) {
-    ev.preventDefault();
-  }
+  // drop4(ev) {
+  //   ev.preventDefault();
+  //   this.data = ev.dataTransfer.getData('drag4');
+  //   ev.target.appendChild(document.getElementById(this.data));
+  // }
 
-  drag4(ev) {
-    ev.dataTransfer.setData('drag1', ev.target.id);
-  }
+  // allowDrop4(ev) {
+  //   ev.preventDefault();
+  // }
+
+  // drag4(ev) {
+  //   ev.dataTransfer.setData('drag1', ev.target.id);
+  // }
   constructor() { }
 
   ngOnInit() {
-    console.log(this.list);
   }
 
 }

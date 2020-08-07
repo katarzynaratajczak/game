@@ -3,13 +3,13 @@
 </div>
 <div class="all">
     <div *ngFor="let letter of list">
-      <div id="div1" (drop)="drop($event)" (dragover)="allowDrop($event)">
-        <img src="{{letter.imagePath}}" draggable="true" (dragstart)="drag($event)" id="drag1" width="50" height="25">
+      <div [id]=letter.pool (drop)="drop($event)" (dragover)="allowDrop($event)">
+        <img src="{{letter.imagePath}}" draggable="true" (dragstart)="drag($event)" [id]=letter.id>
       </div>
     </div>
   </div>
     <div *ngFor="let answear of answearList">
-      <div id="div21" (drop)="drop($event)" (dragover)="allowDrop($event)">
+      <div [id]=answear.pool (drop)="drop($event)" (dragover)="allowDrop($event)">
         <img src="{{answear.imagePath}}">
       </div>
     </div>

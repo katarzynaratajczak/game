@@ -39,19 +39,20 @@ export class PuzzleComponent implements OnInit {
   fillImageList() {
     for (let i = 0; i < 6; i++) {
       const image: ImageForPuzzle = new ImageForPuzzle();
-      image.imagePath = '/assets/images/gamePuzzle/' + (i + 1) + '/0.png';
-      image.value = i + 1;
+      image.imagePath = '/assets/images/gamePuzzle/' + i + '.png';
+      image.value = i;
       this.imageList.push(image);
     }
   }
 
   fillGameList() {
     for (let i = 0; i < 3; i++) {
-    const singleGame = new SingleGame();
-    singleGame.image1 = this.imageList.shift();
-    singleGame.image2 = this.imageList.shift();
+      const singleGame = new SingleGame();
+      singleGame.image1 = this.imageList.shift();
+      singleGame.image2 = this.imageList.shift();
 
-    this.listGame.push(singleGame);}
+      this.listGame.push(singleGame);
+    }
   }
 }
 

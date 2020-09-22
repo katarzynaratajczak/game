@@ -22,7 +22,7 @@ export class ChooseComponent implements OnInit {
   }
 
   fillKitchenList() {
-    for (let i = 0; i < 5; i++) {
+    for (let i = 0; i < 6; i++) {
       const imageToList: ImageForChosse = new ImageForChosse();
       imageToList.imagePath = '/assets/images/gameChoose/kitchen/' + i + '.png';
       this.kitchenList.push(imageToList);
@@ -30,7 +30,7 @@ export class ChooseComponent implements OnInit {
   }
 
   fillBadList() {
-    for (let i = 0; i < 5; i++) {
+    for (let i = 0; i < 4; i++) {
       const imageToList: ImageForChosse = new ImageForChosse();
       imageToList.imagePath = '/assets/images/gameChoose/bad/' + i + '.png';
       this.badList.push(imageToList);
@@ -38,10 +38,10 @@ export class ChooseComponent implements OnInit {
   }
 
   fillBathroomList() {
-    for (let i = 0; i < 5; i++) {
+    for (let i = 0; i < 8; i++) {
       const imageToList: ImageForChosse = new ImageForChosse();
       imageToList.imagePath = '/assets/images/gameChoose/bathroom/' + i + '.png';
-      this.kitchenList.push(imageToList);
+      this.bathroomList.push(imageToList);
     }
   }
 }

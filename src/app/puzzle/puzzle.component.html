@@ -3,4 +3,4 @@
   <h4>Pozostało Ci: {{clickClic}} ruchów</h4>
   <h4>Twoje punkty(max.12 pkt): {{count}} {{title}}</h4>
 </div>
-<app-puzzle-logika (clickEvent)="click($event)" (games)="listGame" (listLenght)="listLength"></app-puzzle-logika>
+<app-puzzle-logika (clickEvent)="click($event)" [games]="listGame" [listLenght]="listLength"></app-puzzle-logika>

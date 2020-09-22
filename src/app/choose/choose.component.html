@@ -1,1 +1,26 @@
-<p>choose works!</p>
+<div class="text">
+  <h6>Poniższe zadanie polega na dopasowaniu obrazków do odpowienich pól. Trzymamy kciuki! </h6>
+</div>
+<div class="bathroom">
+  <h4>Bathroom</h4>
+</div>
+<div class="content">
+  <div *ngFor="let kitchen of kitchenList">
+    <!-- <div [id]=letter.pool (drop)="drop($event)" (dragover)="allowDrop($event)"> -->
+    <img src="{{kitchen.imagePath}}">
+    <!-- draggable="true" (dragstart)="drag($event)" [id]=letter.id> -->
+  </div>
+  <div *ngFor="let bathroom of bathroomList">
+    <!-- <div [id]=letter.pool (drop)="drop($event)" (dragover)="allowDrop($event)"> -->
+    <img src="{{bathroom.imagePath}}">
+    <!-- draggable="true" (dragstart)="drag($event)" [id]=letter.id> -->
+  </div>
+  <div *ngFor="let bad of badList">
+    <!-- <div [id]=letter.pool (drop)="drop($event)" (dragover)="allowDrop($event)"> -->
+    <img src="{{bad.imagePath}}">
+    <!-- draggable="true" (dragstart)="drag($event)" [id]=letter.id> -->
+  </div>
+</div>
+<div class="kitchen">
+  <h4>Kitchen</h4>
+</div>

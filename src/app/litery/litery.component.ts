@@ -25,7 +25,9 @@ export class LiteryComponent implements OnInit {
 
   drag(ev) {
     ev.dataTransfer.setData(this.list.id, ev.target.id);
-    console.log('Udało Ci się');
+    if (this.list.id === this.list.id) {
+      console.log('Jest dobrze');
+    }
   }
 
 

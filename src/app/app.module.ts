@@ -13,6 +13,7 @@ import { DialogComponent } from './dialog/dialog.component';
 import { PuzzleLogikaComponent } from './puzzle-logika/puzzle-logika.component';
 import { ChooseComponent } from './choose/choose.component';
 import { LiteryLogikaComponent } from './litery-logika/litery-logika.component';
+import { ChooseLogikaComponent } from './choose-logika/choose-logika.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { LiteryLogikaComponent } from './litery-logika/litery-logika.component';
     DialogComponent,
     PuzzleLogikaComponent,
     ChooseComponent,
-    LiteryLogikaComponent
+    LiteryLogikaComponent,
+    ChooseLogikaComponent
   ],
   imports: [
     BrowserModule,

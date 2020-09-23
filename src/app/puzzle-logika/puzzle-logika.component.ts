@@ -14,7 +14,7 @@ export class PuzzleLogikaComponent implements OnInit {
   game: SingleGame;
 
 
-  @Input() games;
+  @Input() games: SingleGame[];
   @Input() listLenght;
   // tslint:disable-next-line: no-output-native
   @Output() clickEvent = new EventEmitter<boolean>();
@@ -34,8 +34,13 @@ export class PuzzleLogikaComponent implements OnInit {
       this.isWin = false;
     }
     this.clickEvent.emit(this.isWin);
-    await this.delay(3000);
-    this.startGame();
+    await this.delay(2000);
+
+    if (this.games.length > 0) {
+      this.startGame();
+    } else {
+      this.showResult();
+    }
   }
 
   startGame() {
@@ -47,8 +52,9 @@ export class PuzzleLogikaComponent implements OnInit {
     return new Promise(resolve => setTimeout(resolve, ms));
   }
 
-endGame(){
-
+  showResult() {
+    alert('Koniec gry!');
+  }
 }
 
-}
+

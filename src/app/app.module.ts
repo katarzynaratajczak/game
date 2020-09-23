@@ -9,11 +9,8 @@ import { ZwierzetaComponent } from './zwierzeta/zwierzeta.component';
 import { OwoceComponent } from './owoce/owoce.component';
 import { LiteryComponent } from './litery/litery.component';
 import { FormsModule } from '@angular/forms';
-import { DialogComponent } from './dialog/dialog.component';
 import { PuzzleLogikaComponent } from './puzzle-logika/puzzle-logika.component';
-import { ChooseComponent } from './choose/choose.component';
 import { LiteryLogikaComponent } from './litery-logika/litery-logika.component';
-import { ChooseLogikaComponent } from './choose-logika/choose-logika.component';
 
 @NgModule({
   declarations: [
@@ -22,11 +19,8 @@ import { ChooseLogikaComponent } from './choose-logika/choose-logika.component';
     ZwierzetaComponent,
     OwoceComponent,
     LiteryComponent,
-    DialogComponent,
     PuzzleLogikaComponent,
-    ChooseComponent,
-    LiteryLogikaComponent,
-    ChooseLogikaComponent
+    LiteryLogikaComponent
   ],
   imports: [
     BrowserModule,

@@ -12,7 +12,7 @@ export class PuzzleComponent implements OnInit {
   imageValue1 = new ImageForPuzzle();
   imageValue2 = new ImageForPuzzle();
   count = 0;
-  clickClic = 12;
+  clickClic = 3;
   title = '';
 
   listGame = new Array<SingleGame>();

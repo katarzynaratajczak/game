@@ -3,7 +3,7 @@
   <img src='/assets/images/gamePuzzle/good.jpg' *ngIf="isWin">
   <img src='/assets/images/gamePuzzle/bad.jpg' *ngIf="!isWin">
 </div>
-<div *ngIf="isGameActive">
+<div *ngIf="isGameActive" >
   <div class="puzzle">
     <button (click)="saveClick(game.image1.value, game.image2.value)">
       <img [src]='game.image1.imagePath'>
@@ -14,4 +14,3 @@
   </div>
 </div>
 </section>
-{{games | json}}

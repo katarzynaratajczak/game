@@ -1,6 +1,5 @@
 import { ImageForLitery } from './../models/imageForLitery';
 import { Component, OnInit } from '@angular/core';
-import { forkJoin } from 'rxjs';
 
 @Component({
   selector: 'app-litery-logika',

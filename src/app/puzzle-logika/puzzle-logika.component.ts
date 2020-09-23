@@ -13,6 +13,7 @@ export class PuzzleLogikaComponent implements OnInit {
   isGameActive: boolean;
   game: SingleGame;
 
+
   @Input() games;
   @Input() listLenght;
   // tslint:disable-next-line: no-output-native
@@ -22,11 +23,10 @@ export class PuzzleLogikaComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
-    this.isGameActive = true;
     this.startGame();
   }
 
-  saveClick(clickedImage: number, secondImage: number) {
+  async saveClick(clickedImage: number, secondImage: number) {
     this.isGameActive = false;
     if (clickedImage > secondImage) {
       this.isWin = true;
@@ -34,11 +34,21 @@ export class PuzzleLogikaComponent implements OnInit {
       this.isWin = false;
     }
     this.clickEvent.emit(this.isWin);
-
+    await this.delay(3000);
+    this.startGame();
   }
 
   startGame() {
-      this.game = this.games.shift();
+    this.isGameActive = true;
+    this.game = this.games.shift();
   }
+
+  private delay(ms: number) {
+    return new Promise(resolve => setTimeout(resolve, ms));
+  }
+
+endGame(){
+
 }
 
+}

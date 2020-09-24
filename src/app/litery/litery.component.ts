@@ -15,19 +15,22 @@ export class LiteryComponent implements OnInit {
 
   drop(ev) {
     ev.preventDefault();
-    this.data = ev.dataTransfer.getData(this.list.id);
-    ev.target.appendChild(document.getElementById(this.data));
+    const data = ev.dataTransfer.getData('text');
+    if (data === ev.target.id) {
+      alert('dobrze');
+    } else {
+      alert('Zły');
+    }
+
   }
+
 
   allowDrop(ev) {
     ev.preventDefault();
   }
 
   drag(ev) {
-    ev.dataTransfer.setData(this.list.id, ev.target.id);
-    if (this.list.id === this.list.id) {
-      console.log('Jest dobrze');
-    }
+    ev.dataTransfer.setData('text/plain', ev.target.id);
   }
 
 

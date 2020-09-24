@@ -34,9 +34,9 @@ export class LiteryLogikaComponent implements OnInit {
       const image: ImageForLitery = new ImageForLitery();
       image.imagePath = '/assets/images/gameDrop/' + j + '.png';
       image.value = j;
-      image.pool = 'div' + j;
+      image.pool = 'dov' + j;
       image.id = 'drag' + j;
-      this.imageList.push(image);
+      this.answearList.push(image);
     }
   }
 }

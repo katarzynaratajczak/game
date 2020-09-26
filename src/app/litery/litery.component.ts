@@ -17,13 +17,12 @@ export class LiteryComponent implements OnInit {
     ev.preventDefault();
     const data = ev.dataTransfer.getData('text');
     if (data === ev.target.id) {
-      alert('dobrze');
+      ev.target.appendChild(document.getElementById(data));
     } else {
       alert('Zły');
     }
 
   }
-
 
   allowDrop(ev) {
     ev.preventDefault();
@@ -32,7 +31,6 @@ export class LiteryComponent implements OnInit {
   drag(ev) {
     ev.dataTransfer.setData('text/plain', ev.target.id);
   }
-
 
 
   // drop2(ev) {

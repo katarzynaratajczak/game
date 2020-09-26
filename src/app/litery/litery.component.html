@@ -2,7 +2,7 @@
   <h6>Przed Tobą kolejne zadanie. Dopasuj literki w niebieskich ramkach do odpowiadających im literek w czerwonych ramkach. Powodzenia! </h6>
 </div>
 <div class="all">
-  <div *ngFor="let letter of list">
+  <div *ngFor="let letter of list" >
     <div [id]=letter.pool>
       <img src="{{letter.imagePath}}" draggable="true" (dragstart)="drag($event)" [id]="letter.id">
     </div>

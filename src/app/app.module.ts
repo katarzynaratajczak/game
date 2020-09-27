@@ -11,6 +11,8 @@ import { LiteryComponent } from './litery/litery.component';
 import { FormsModule } from '@angular/forms';
 import { PuzzleLogikaComponent } from './puzzle-logika/puzzle-logika.component';
 import { LiteryLogikaComponent } from './litery-logika/litery-logika.component';
+import { UkladankaComponent } from './ukladanka/ukladanka.component';
+import { UkladankaLogikaComponent } from './ukladanka-logika/ukladanka-logika.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +22,9 @@ import { LiteryLogikaComponent } from './litery-logika/litery-logika.component';
     OwoceComponent,
     LiteryComponent,
     PuzzleLogikaComponent,
-    LiteryLogikaComponent
+    LiteryLogikaComponent,
+    UkladankaComponent,
+    UkladankaLogikaComponent
   ],
   imports: [
     BrowserModule,

@@ -10,6 +10,6 @@ export class AppComponent {
   liczby = '/assets/images/nav/1.png';
   literki = '/assets/images/nav/2.png';
   zwierzeta = '/assets/images/nav/3.png';
-  choose = '/assets/images/nav/4.png';
+  ukladanka = '/assets/images/nav/4.png';
   constructor() { }
 }

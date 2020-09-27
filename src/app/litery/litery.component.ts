@@ -19,7 +19,7 @@ export class LiteryComponent implements OnInit {
     if (data === ev.target.id) {
       ev.target.appendChild(document.getElementById(data));
     } else {
-      alert('Zły');
+      alert('Zły ruch. Dopasuj literę jeszcze raz');
     }
 
   }

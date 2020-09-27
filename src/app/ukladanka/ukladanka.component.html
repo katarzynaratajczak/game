@@ -1,0 +1,24 @@
+<section *ngIf='imageList'>
+  <h3>Układanka</h3>
+<div class="all">
+  <div *ngFor="let image of imageList">
+    <div [id]=image.pool>
+      <img src="{{image.imagePath}}"  draggable="true" (dragstart)="drag($event)" [id]="image.id" style="filter: opacity(100%);">
+    </div>
+  </div>
+</div>
+<div class="second">
+  <div *ngFor="let answear of answearList">
+    <div [id]=answear.pool>
+      <img src="{{answear.imagePath}}" (drop)="drop($event)" (dragover)="allowDrop($event)" [id]="answear.id" style="filter: opacity(50%);">
+    </div>
+  </div>
+</div>
+<div class="next">
+  <div *ngFor="let answear of answearListSecond">
+    <div [id]=answear.pool>
+      <img src="{{answear.imagePath}}" (drop)="drop($event)" (dragover)="allowDrop($event)" [id]="answear.id" style="filter: opacity(50%);">
+    </div>
+  </div>
+</div>
+</section>

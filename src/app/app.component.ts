@@ -11,5 +11,6 @@ export class AppComponent {
   literki = '/assets/images/nav/2.png';
   zwierzeta = '/assets/images/nav/3.png';
   ukladanka = '/assets/images/nav/4.png';
+  start = '/assets/images/nav/5.png';
   constructor() { }
 }

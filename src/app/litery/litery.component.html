@@ -4,64 +4,15 @@
 <div class="all">
   <div *ngFor="let letter of list" >
     <div [id]=letter.pool>
-      <img src="{{letter.imagePath}}" draggable="true" (dragstart)="drag($event)" [id]="letter.id">
+      <img src="{{letter.imagePath}}" draggable="true" (dragstart)="drag($event)" [id]="letter.id" style="filter: opacity(100%);">
     </div>
   </div>
   <div class="clear"></div>
   <div *ngFor="let answear of answearList">
-    <div [id]=answear.pool (drop)="drop($event)" (dragover)="allowDrop($event)">
-      <img src="{{answear.imagePath}}" [id]="answear.id">
+    <div [id]=answear.pool (drop)="drop($event)" (dragover)="allowDrop($event)" >
+      <img src="{{answear.imagePath}}" [id]="answear.id" style="filter: opacity(50%);">
     </div>
   </div>
 </div>
 
 
-
-
-<!-- <div class="all">
-  <div id="div1" (drop)="drop($event)" (dragover)="allowDrop($event)">
-
-    <img src="/assets/images/gameDrop/k.png" draggable="true" (dragstart)="drag($event)" id="drag1" width="50" height="25">
-  </div>
-
-  <div id="div2" (drop)="drop($event)" (dragover)="allowDrop($event)">
-  </div>
-  <div class="title">
-    <h4>{{title4}}</h4>
-  </div>
-
-  <div id="div3" (drop)="drop2($event)" (dragover)="allowDrop2($event)">
-
-    <img src="/assets/images/gameDrop/g.png" draggable="true" (dragstart)="drag2($event)" id="drag2" width="100" height="50">
-  </div>
-
-  <div id="div4" (drop)="drop2($event)" (dragover)="allowDrop2($event)">
-  </div>
-  <div class="title">
-    <h4>{{title3}}</h4>
-  </div>
-
-
-  <div id="div5" (drop)="drop3($event)" (dragover)="allowDrop3($event)">
-
-    <img src="/assets/images/gameDrop/m.png" draggable="true" (dragstart)="drag3($event)" id="drag3" width="100" height="50">
-  </div>
-
-  <div id="div6" (drop)="drop3($event)" (dragover)="allowDrop3($event)">
-  </div>
-  <div class="title">
-    <h4>{{title2}}</h4>
-  </div>
-
-  <div id="div7" (drop)="drop4($event)" (dragover)="allowDrop4($event)">
-
-    <img src="/assets/images/gameDrop/a.png" draggable="true" (dragstart)="drag4($event)"
-    id="drag4" width="100" height="50">
-  </div>
-
-  <div id="div8" (drop)="drop4($event)" (dragover)="allowDrop4($event)">
-  </div>
-  <div class="title">
-    <h4>{{title}}</h4>
-  </div>
-</> -->

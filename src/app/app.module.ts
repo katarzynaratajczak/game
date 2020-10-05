@@ -13,6 +13,7 @@ import { PuzzleLogikaComponent } from './puzzle-logika/puzzle-logika.component';
 import { LiteryLogikaComponent } from './litery-logika/litery-logika.component';
 import { UkladankaComponent } from './ukladanka/ukladanka.component';
 import { UkladankaLogikaComponent } from './ukladanka-logika/ukladanka-logika.component';
+import { StartComponent } from './start/start.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { UkladankaLogikaComponent } from './ukladanka-logika/ukladanka-logika.co
     PuzzleLogikaComponent,
     LiteryLogikaComponent,
     UkladankaComponent,
-    UkladankaLogikaComponent
+    UkladankaLogikaComponent,
+    StartComponent
   ],
   imports: [
     BrowserModule,

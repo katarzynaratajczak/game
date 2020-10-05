@@ -18,6 +18,8 @@ export class LiteryComponent implements OnInit {
     const data = ev.dataTransfer.getData('text');
     if (data === ev.target.id) {
       ev.target.appendChild(document.getElementById(data));
+      const zmiana = document.getElementById(ev.target.id);
+      zmiana.style.filter = 'opacity(100%)';
     } else {
       alert('Zły ruch. Dopasuj literę jeszcze raz');
     }
@@ -32,48 +34,6 @@ export class LiteryComponent implements OnInit {
     ev.dataTransfer.setData('text/plain', ev.target.id);
   }
 
-
-  // drop2(ev) {
-  //   ev.preventDefault();
-  //   this.data = ev.dataTransfer.getData('drag2');
-  //   ev.target.appendChild(document.getElementById(this.data));
-  // }
-
-  // allowDrop2(ev) {
-  //   ev.preventDefault();
-  // }
-
-  // drag2(ev) {
-  //   ev.dataTransfer.setData('drag3', ev.target.id);
-  // }
-
-  // drop3(ev) {
-  //   ev.preventDefault();
-  //   this.data = ev.dataTransfer.getData('drag3');
-  //   ev.target.appendChild(document.getElementById(this.data));
-  // }
-
-  // allowDrop3(ev) {
-  //   ev.preventDefault();
-  // }
-
-  // drag3(ev) {
-  //   ev.dataTransfer.setData('drag2', ev.target.id);
-  // }
-
-  // drop4(ev) {
-  //   ev.preventDefault();
-  //   this.data = ev.dataTransfer.getData('drag4');
-  //   ev.target.appendChild(document.getElementById(this.data));
-  // }
-
-  // allowDrop4(ev) {
-  //   ev.preventDefault();
-  // }
-
-  // drag4(ev) {
-  //   ev.dataTransfer.setData('drag1', ev.target.id);
-  // }
   constructor() { }
 
   ngOnInit() {

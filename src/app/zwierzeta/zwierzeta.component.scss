@@ -41,16 +41,58 @@ img {
    width: 700px;
    margin: 0 auto;
  }
-.hint {
-  width: 30px;
-  height: 30px;
-  position: fixed;
-  top:300px;
-  right: 200px;
+
+
+ #pudelko {
+  width:180px;
+  height:240px;
+  margin:0 auto;
+  border:3px dashed #000;
+  background-color: lightgreen;
+  perspective:300px;
+  position: absolute;
+  top: 250px;
+  right: 50px;
 }
-button{
-  border: 2px solid black;
+
+#pudelko:hover > #karta {
+  transform:rotateY(180deg)
 }
- button:hover {
-   background-color: lightpink;
- }
+
+#karta {
+  width:100%;
+  height:100%;
+  background-color:#EEE;
+  text-align:center;
+  transition: 1s;
+  position: relative;
+  transform-style:preserve-3d;
+}
+
+#przod {
+  position:absolute;
+  width:100%;
+  height:100%;
+  color:#F00;
+  font-size:1.6em;
+  background:url('/assets/images/gameAnimals/help.jpg') no-repeat;
+  background-size:100%;
+  backface-visibility:hidden;
+  box-shadow:0 0 4px 8px #FFF inset;
+}
+
+#tyl {
+  position:absolute;
+  width:100%;
+  height:100%;
+  color:#FFF;
+  font-size:1.6em;
+  background-color:#000;
+  transform:rotateY(180deg);
+  backface-visibility:hidden;
+  box-shadow:0 0 4px 8px #FFF inset;
+}
+
+p {
+  display: block;
+}

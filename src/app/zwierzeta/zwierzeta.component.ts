@@ -17,13 +17,9 @@ export class ZwierzetaComponent implements OnInit {
   sowa = '';
   kot = '';
   sarna = '';
-  hint = 'Pomoc';
   constructor() { }
 
   ngOnInit() {
-  }
-  chang() {
-    this.hint = 'Pies Kot Sowa Sarna';
   }
 }
 

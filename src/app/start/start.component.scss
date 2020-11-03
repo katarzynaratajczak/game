@@ -7,8 +7,25 @@ width: 600px;
 img {
   width: 400px;
   height: 300px;
+  position: relative;
 
 }
+
+#tooltip {
+  width:100%;
+  line-height:2em;
+  padding:15px;
+  border:1px solid #000;
+  background-color:#FAFAFA;
+  position:absolute;
+  top:0;
+  left:105%;
+
+
+}
+
+
+
 
 #rodzic {
   width:448px;

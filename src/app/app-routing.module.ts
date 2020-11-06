@@ -5,6 +5,7 @@ import { OwoceComponent } from './owoce/owoce.component';
 import { PuzzleComponent } from './puzzle/puzzle.component';
 import { StartComponent } from './start/start.component';
 import { UkladankaLogikaComponent } from './ukladanka-logika/ukladanka-logika.component';
+import { ZwierzetaLogikaComponent } from './zwierzeta-logika/zwierzeta-logika.component';
 import { ZwierzetaComponent } from './zwierzeta/zwierzeta.component';
 
 
@@ -12,7 +13,7 @@ const routes: Routes = [
   { path: 'litery-logika', component: LiteryLogikaComponent },
   { path: 'owoce', component: OwoceComponent },
   { path: 'puzzle', component: PuzzleComponent },
-  { path: 'zwierzeta', component: ZwierzetaComponent },
+  { path: 'zwierzeta-logika', component: ZwierzetaLogikaComponent },
   { path: 'ukladanka', component: UkladankaLogikaComponent },
   { path: 'start', component: StartComponent },
   { path: '', redirectTo: '/start', pathMatch: 'full' }

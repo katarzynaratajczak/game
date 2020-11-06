@@ -1,5 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-import { FormGroup } from '@angular/forms';
+import { Component, Input, OnInit } from '@angular/core';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-zwierzeta',
@@ -7,19 +7,26 @@ import { FormGroup } from '@angular/forms';
   styleUrls: ['./zwierzeta.component.scss']
 })
 export class ZwierzetaComponent implements OnInit {
-  img1 = '/assets/images/gameAnimals/pies.png';
-  img2 = '/assets/images/gameAnimals/sowa.png';
-  img3 = '/assets/images/gameAnimals/kot.png';
-  img4 = '/assets/images/gameAnimals/sarna.png';
+
+  @Input() list;
 
   form: FormGroup;
-  zwierze = '';
-  sowa = '';
-  kot = '';
-  sarna = '';
-  constructor() { }
+  post: any;
+
+  constructor(private fb: FormBuilder) {
+    this.form = fb.group({
+      kot: [null, Validators.compose([Validators.required, Validators.maxLength(3), Validators.pattern('kot')])],
+      pies: [null, Validators.compose([Validators.required, Validators.maxLength(4), Validators.pattern('pies')])],
+      sarna: [null, Validators.compose([Validators.required, Validators.maxLength(5), Validators.pattern('sarna')])],
+      kon: [null, Validators.compose([Validators.required, Validators.maxLength(3),  Validators.pattern('kon')])]
+    })
+  }
 
   ngOnInit() {
+  }
+
+  show(){
+    alert('WSPANIALE CI POSZŁO!!!');
   }
 }
 

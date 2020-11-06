@@ -2,7 +2,6 @@
   <h6>Twoim zadaniem jest wpisać w pole nazwy zwierząt. Możesz skorzystać z podpowiedzi.
   </h6>
 </div>
-
 <div id="pudelko">
   <div id="karta">
     <div id="przod"></div>
@@ -10,52 +9,40 @@
       <p>Pies</p>
       <p>Kot</p>
       <p>Sarna</p>
-      <p>Sowa</p>
+      <p>Kon</p>
+    </div>
+  </div>
+</div>
+<div class="wrapper">
+  <div class="container">
+    <div *ngFor="let letter of list">
+      <img src="{{letter.imagePath}}" id="zagadka">
     </div>
   </div>
 </div>
 
-
-<div class="wrapper">
-  <div class="container">
-    <div id="zagadka">
-      <button class="won"><img [src]="img1"></button>
-    </div>
-    <div id="zagadka">
-      <button class="won"><img [src]="img2"></button>
-    </div>
-    <div id="zagadka">
-      <button class="won"><img [src]="img3"></button>
-    </div>
-    <div id="zagadka">
-      <button class="won"><img [src]="img4"></button>
-    </div>
-  </div>
-
-  <div class="answer">
-    <div class="pies">
-      <input class="pies" [(ngModel)]="zwierze">
-      <div class="nazwa">
-        <p>Zwierze na obrazku to: {{zwierze}} </p>
-      </div>
-    </div>
-    <div class="sowa">
-      <input class="sowa" [(ngModel)]="sowa">
-      <div class="nazwa">
-        <p>Zwierze na obrazku to: {{sowa}} </p>
-      </div>
-    </div>
+<div class="answer">
+  <form [formGroup]="form">
     <div class="kot">
-      <input class="kot" [(ngModel)]="kot">
-      <div class="nazwa">
-        <p>Zwierze na obrazku to: {{kot}} </p>
-      </div>
+      <input class="kot" type="text" name="kot" formControlName="kot"
+        [ngClass]="{'in-valid': !form.controls['kot'].valid && form.controls['kot'].touched}">
+      <b class="alert" *ngIf="!form.controls['kot'].valid && form.controls['kot'].touched"> Wpisałeś złą nazwę</b>
+    </div>
+    <div class="pies">
+      <input class="pies" type="text" name="pies" formControlName="pies"
+      [ngClass]="{'in-valid': !form.controls['pies'].valid && form.controls['pies'].touched}">
+      <b class="alert" *ngIf="!form.controls['pies'].valid && form.controls['pies'].touched"> Wpisałeś złą nazwę</b>
     </div>
     <div class="sarna">
-      <input class="sarna" [(ngModel)]="sarna">
-      <div class="nazwa">
-        <p>Zwierze na obrazku to: {{sarna}} </p>
-      </div>
+      <input class="sarna" type="text" name="sarna" formControlName="sarna"
+      [ngClass]="{'in-valid': !form.controls['sarna'].valid && form.controls['sarna'].touched}">
+      <b class="alert" *ngIf="!form.controls['sarna'].valid && form.controls['sarna'].touched"> Wpisałeś złą nazwę</b>
     </div>
-  </div>
+    <div class="kon">
+      <input class="kon" type="text" name="kon" formControlName="kon"
+      [ngClass]="{'in-valid': !form.controls['kon'].valid && form.controls['kon'].touched}">
+      <b class="alert" *ngIf="!form.controls['kon'].valid && form.controls['kon'].touched"> Wpisałeś złą nazwę</b>
+    </div>
+    <button id="button" [disabled]="!form.valid" (click)='show()'>SPRAWDŹ</button>
+  </form>
 </div>

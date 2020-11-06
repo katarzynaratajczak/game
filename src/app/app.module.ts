@@ -8,12 +8,13 @@ import { PuzzleComponent } from './puzzle/puzzle.component';
 import { ZwierzetaComponent } from './zwierzeta/zwierzeta.component';
 import { OwoceComponent } from './owoce/owoce.component';
 import { LiteryComponent } from './litery/litery.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { PuzzleLogikaComponent } from './puzzle-logika/puzzle-logika.component';
 import { LiteryLogikaComponent } from './litery-logika/litery-logika.component';
 import { UkladankaComponent } from './ukladanka/ukladanka.component';
 import { UkladankaLogikaComponent } from './ukladanka-logika/ukladanka-logika.component';
 import { StartComponent } from './start/start.component';
+import { ZwierzetaLogikaComponent } from './zwierzeta-logika/zwierzeta-logika.component';
 
 @NgModule({
   declarations: [
@@ -26,13 +27,15 @@ import { StartComponent } from './start/start.component';
     LiteryLogikaComponent,
     UkladankaComponent,
     UkladankaLogikaComponent,
-    StartComponent
+    StartComponent,
+    ZwierzetaLogikaComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     NgbModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -26,7 +26,7 @@ img {
   float: left;
   margin-left: 20px;
 }
- .pies, .sowa, .kot, .sarna {
+ .pies, .kon, .kot, .sarna {
    height: 100px;
    margin-bottom: 15px;
    margin-top: 5px;
@@ -38,10 +38,24 @@ img {
    margin-top: 50px;
    }
  .wrapper {
-   width: 700px;
+   width: 1000px;
    margin: 0 auto;
  }
+ #button {
+   position: absolute;
+   right: 350px;
+   top: 350px;
+   width: 100px;
+   height: 60px;
+ }
 
+ .in-valid {
+   border: 1px solid red;
+ }
+
+ .alert {
+   color: red;
+ }
 
  #pudelko {
   width:180px;

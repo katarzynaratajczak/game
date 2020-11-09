@@ -15,6 +15,7 @@ import { UkladankaComponent } from './ukladanka/ukladanka.component';
 import { UkladankaLogikaComponent } from './ukladanka-logika/ukladanka-logika.component';
 import { StartComponent } from './start/start.component';
 import { ZwierzetaLogikaComponent } from './zwierzeta-logika/zwierzeta-logika.component';
+import { BajkaComponent } from './bajka/bajka.component';
 
 @NgModule({
   declarations: [
@@ -29,6 +30,7 @@ import { ZwierzetaLogikaComponent } from './zwierzeta-logika/zwierzeta-logika.co
     UkladankaLogikaComponent,
     StartComponent,
     ZwierzetaLogikaComponent,
+    BajkaComponent,
   ],
   imports: [
     BrowserModule,

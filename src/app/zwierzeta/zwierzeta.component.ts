@@ -18,14 +18,14 @@ export class ZwierzetaComponent implements OnInit {
       kot: [null, Validators.compose([Validators.required, Validators.maxLength(3), Validators.pattern('kot')])],
       pies: [null, Validators.compose([Validators.required, Validators.maxLength(4), Validators.pattern('pies')])],
       sarna: [null, Validators.compose([Validators.required, Validators.maxLength(5), Validators.pattern('sarna')])],
-      kon: [null, Validators.compose([Validators.required, Validators.maxLength(3),  Validators.pattern('kon')])]
+      kon: [null, Validators.compose([Validators.required, Validators.maxLength(3), Validators.pattern('kon')])]
     })
   }
 
   ngOnInit() {
   }
 
-  show(){
+  show() {
     alert('WSPANIALE CI POSZŁO!!!');
   }
 }

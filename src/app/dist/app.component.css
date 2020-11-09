@@ -17,31 +17,27 @@
   100% {
     background-color: lightblue;
   }
-
 }
-
-  @-webkit-keyframes anim {
-    0% {
-      background-color: lightblue;
-    }
-    20% {
-      background-color: lightcoral;
-    }
-    40% {
-      background-color: lightgreen;
-    }
-    60% {
-      background-color: blueviolet;
-    }
-    80% {
-      background-color: lightsalmon;
-    }
-    100% {
-      background-color: lightblue;
-    }
+@-webkit-keyframes anim {
+  0% {
+    background-color: lightblue;
+  }
+  20% {
+    background-color: lightcoral;
+  }
+  40% {
+    background-color: lightgreen;
+  }
+  60% {
+    background-color: blueviolet;
+  }
+  80% {
+    background-color: lightsalmon;
+  }
+  100% {
+    background-color: lightblue;
+  }
 }
-
-
 div {
   height: 40px;
   margin: 10px 0;
@@ -49,16 +45,15 @@ div {
   text-align: center;
   animation: anim 20s infinite;
   -webkit-animation: anim 20s infinite;
-
 }
 
 nav {
   width: 1200px;
- margin-left: auto;
- margin-right: auto;
- }
+  margin-left: auto;
+  margin-right: auto;
+}
 
- img {
+img {
   width: 140px;
   height: 80px;
 }
@@ -66,12 +61,8 @@ nav {
 img:hover {
   border: 2px solid lightseagreen;
 }
- .zagadka {
-   display: inline-block;
-   width: 500px;
- }
 
-//  Kod na cienie
-//  h3 {
-//   text-shadow:black 0.2em 0.3em 0.2em;
-//  }
+.zagadka {
+  display: inline-block;
+  width: 500px;
+}

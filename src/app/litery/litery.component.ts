@@ -21,7 +21,7 @@ export class LiteryComponent implements OnInit {
       const zmiana = document.getElementById(ev.target.id);
       zmiana.style.filter = 'opacity(100%)';
     } else {
-      alert('Zły ruch. Dopasuj literę jeszcze raz');
+      alert('Zły ruch. Dopasuj literę jeszcze raz!');
     }
 
   }

@@ -7,6 +7,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 };
 exports.__esModule = true;
 exports.AppRoutingModule = void 0;
+var bajka_component_1 = require("./bajka/bajka.component");
 var core_1 = require("@angular/core");
 var router_1 = require("@angular/router");
 var litery_logika_component_1 = require("./litery-logika/litery-logika.component");
@@ -22,6 +23,7 @@ var routes = [
     { path: 'zwierzeta-logika', component: zwierzeta_logika_component_1.ZwierzetaLogikaComponent },
     { path: 'ukladanka', component: ukladanka_logika_component_1.UkladankaLogikaComponent },
     { path: 'start', component: start_component_1.StartComponent },
+    { path: 'bajka', component: bajka_component_1.BajkaComponent },
     { path: '', redirectTo: '/start', pathMatch: 'full' }
 ];
 var AppRoutingModule = /** @class */ (function () {
